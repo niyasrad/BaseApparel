@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/images/logo.svg';
+import bg from './assets/images/bg-pattern-desktop.svg';
+import woman1 from './assets/images/hero-desktop.jpg';
+import woman2 from './assets/images/hero-mobile.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="flex-one">
+        <img className="bg" src={bg} alt="bg"/>
+        <img src={logo} alt="logo" className='logo' />
+        <div className="bottom">
+          <h1><span className="brawn">WE'RE</span><br></br>COMING<br></br>SOON</h1>
+          <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        </div>
+        <div className="email">
+          <input className="input" type='email' placeholder="Email Address" name="email"></input>
+          <input className='button' type='submit' value='&gt;' />
+        </div>
+      </div>
+      <img src={woman1} alt="woman" className="woman" />
     </div>
   );
 }
